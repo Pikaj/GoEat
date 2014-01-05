@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>GoEat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/nanoscroller.css" rel="stylesheet" > 
+    <style type="text/css"></style><style type="text/css"></style>
+
+  </head>
+
+  <body style="">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">GoEat</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./">Sign in</a></li>
+            <li class="active"><a href="./">Log in</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div id="main" class="container">
+
+    </div> <!-- /container -->
+    <script type ="x-handlebars-template" id="city-form-template" >
+      <div id="city_form" >
+          <form class="form-signin" role="form">
+            <center>
+            <h2 class="city_label" class="form-signin-heading">LOCATION</h2>
+            </center>
+            <div id="search-city">
+              <input name="city" class="form-control" placeholder="Wrocław" >
+            </div>
+            <div id="restaurant-list-conatiner" class="nano">
+              <div class="content">
+                <div id="restaurants-list">
+                </div>
+              </div>
+            </div>
+          </form>
+      </div>
+    </script>
+
+    <script type ="x-handlebars-template" id="search-form-template" >
+      <div id="search_form" >
+          <form class="form-signin" role="form">
+            <center>
+              <h2 class="form-signin-heading">PHRASE</h2>
+            </center>
+            <div id="search-phrase">
+              <input name="phrase" class="form-control" placeholder="" >
+            </div>
+            <center>
+              <h2 class="form-signin-heading">CATEGORIES</h2>
+            </center>
+            <div id="category-container" class="nano">
+              <div class="content">
+                <span id="list-category-added">
+                </span>
+                <button type="button" id="add-category" class="btn btn-xs btn-default"> + </button>
+              </div>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" name="search-near"> Nearest location 
+            </label>
+            <center>
+            <button type="button" class="btn btn-lg btn-primary">Search</button>
+            </center>
+          </form>
+      </div>
+    </script>
+
+    <script type ="x-handlebars-template" id="category-added-template" >
+      <span id="category-added" data-id="{{categoryID}}">
+        {{category.name}}
+        <span data-id="1" class="remove-category-container">X</span>
+      </span>
+    </script>
+
+    <script type ="x-handlebars-template" id="categories-template" >
+      <div id="categories-list">
+        <div id="nano-categories-list">
+          <div class="nano">
+            <div class="content">
+              <div id="categories-list-container">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="button-done-conatiner">
+        </div>
+      </div>
+    </script>
+
+    <script type ="x-handlebars-template" id="button-done-template" >
+      <center>
+        <button type="button" id="done-category" class="btn btn-primary">Done</button>
+      </center>
+    </script>
+
+    <script type ="x-handlebars-template" id="category-name-template">
+        <div id="category-name" data-id="{{categoryID}}">
+          {{category}}
+          <button style="float: right;" class="btn btn-xs btn-default add-category-container"> + </button>
+        </div>
+    </script>
+
+    <script type ="x-handlebars-template" id="restaurant-label">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{restaurant.name}}</h3>
+            </div>
+            <div class="panel-body">
+              Information
+            </div>
+          </div>
+    </script>
+
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.nanoscroller.min.js"></script>
+    <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+    <script type="text/javascript" src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.1.2.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+    <script type"text/javascript" src="/js/YouAreDaBomb.js"></script>
+    <script type"text/javascript" src="/js/YouAreDaBomb.shortcuts.js"></script>
+    <script src="/js/app.js" type="text/javascript"></script> 
+  </body>
+</html>
